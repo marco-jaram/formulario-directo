@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="formulario.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="contendio-formulario contenedor">
+    <form action="" id="form" class="form">
+    
+       
+          <input class="input-formulario" type="text" id="name" name="nombre" placeholder="Nombre" cols="50" required>
+      
+   
+          <input class="input-formulario" type="email" id="mail" name="correo"placeholder="correo@ejemplo.com" cols="50" required>
+       
+       
+          <textarea id="msg" name="mensaje" placeholder="Mensaje" rows="3" required></textarea>
+     
+        <button class="boton-submit" type="submit">Enviar </button>
+      
+    </form>
+
+  </div>
+
+
+
+
+
+
+
+  <style>
+    #truco {
+      opacity: 0;
+    }
+  </style>
+  <a href="mailto:marco.jaramillocast@gmail.com" id="truco">Mail</a>
+
+  <script>
+    const $form = document.querySelector('#form')
+    const $buttonMailto = document.querySelector('#truco')
+
+    $form.addEventListener('submit', handleSubmit)
+
+    function handleSubmit(event) {
+      event.preventDefault()
+      const form = new FormData(this)
+      $buttonMailto.setAttribute('href', `mailto:marco.jaramillocast@gmail.com?subject=Contacto desde sitio Web &body=Nombre: ${form.get('nombre')} <br> Correo: ${form.get('correo')} <br>Mensaje: ${form.get('mensaje')}`)
+      $buttonMailto.click()
+    }
+  </script>
+
+</body>
+
+</html>

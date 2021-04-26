@@ -1,0 +1,58 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* .contenedor {
+    max-width: 768px;
+    width: 95%;
+    margin: 0 auto;
+} */
+
+.form {
+    margin: 0 auto;
+    width: 300px;
+    padding: 20px;
+    background-color: #845ec2;
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px #57555591;
+}
+
+label {
+    color: rgb(97, 95, 95);
+}
+
+textarea {
+    padding: 5px;
+    width: 100%;
+    margin: 0px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-formulario {
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+  
+    width: 100%;
+    margin-bottom: 10px;
+    background-color:  white;
+}
+
+
+.boton-submit {
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: blue;
+    color: white;
+    box-shadow: 2px 3px 5px #00000085;
+}
